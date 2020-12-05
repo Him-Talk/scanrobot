@@ -16,6 +16,10 @@ module.exports = {
     'html'
   ],
   'rules': {
+    'new-cap': 'off',
+    "indent": 'off',
+    // "quote-props":[2, "always"],
+    'no-unused-vars': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await

@@ -1,4 +1,4 @@
-const state = {
+const state = sessionStorage.getItem('state') ? JSON.parse(sessionStorage.getItem('state')).Counter : {
   main: 0
 }
 

@@ -1,10 +1,13 @@
-const state = {
+const state = sessionStorage.getItem('state') ? JSON.parse(sessionStorage.getItem('state')).BaseConfig : {
   transition: 'default',
   backGroundType: 2,
   backGroundBlur: 2,
   backGroundImg: '123.jpg',
   backGroundColor: '#fff',
-  fontColor: '#000'
+  fontColor: '#000',
+  favorite: [],
+  allmarket: [],
+  quota: ['usdt']
 }
 
 const getters = {
@@ -18,6 +21,9 @@ const getters = {
         'background': state.backGroundColor
       }
     }
+  },
+  favoriteChild: state => {
+    return state.favorite
   },
   backGroundChild: state => {
     if (state.backGroundType === 1) {
@@ -41,6 +47,12 @@ const getters = {
 }
 
 const mutations = {
+  CHANGE_MARKET (state, market) {
+    state.allmarket = market
+  },
+  CHANGE_FAVORITE (state, favorite) {
+    state.favorite = favorite
+  },
   CHANGE_TRANSITION (state, type) {
     state.transition = type
   },

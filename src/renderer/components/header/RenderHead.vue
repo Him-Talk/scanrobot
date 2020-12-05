@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <span style="margin-left: 5px;font-size: 13px">{{title}}</span>
+        <span style="margin-left: 15px;font-size: 13px;font-weight: bold;color: #fff;">{{title}}</span>
         <div class="rightBox">
             <i @click="hideWindow" class="rightIcon iconfont icon-zuixiaohua"></i>
             <i @click="closeWindow" class="rightIconLast rightIcon iconfont icon-guanbi5"></i>

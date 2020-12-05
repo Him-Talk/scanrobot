@@ -21,7 +21,7 @@
     "renderer": {
       "presets": [
         ["env", {
-          "modules": false
+          "modules": "commonjs"
         }],
         "stage-0"
       ]
@@ -29,9 +29,19 @@
     "web": {
       "presets": [
         ["env", {
-          "modules": false
+          "modules": "commonjs"
         }],
         "stage-0"
+      ]
+    },
+    "babel": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": "commonjs"
+          }
+        ]
       ]
     }
   },

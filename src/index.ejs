@@ -2,8 +2,9 @@
 <html lang="en" class="htmlClass">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>electron-ui</title>
+    <title>Auto robot transactions</title>
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
       <!-- Add `node_modules/` to global paths so `require` works properly in development -->
       <script>
@@ -50,7 +51,6 @@ if (process.env.NODE_ENV !== 'development') window.__static = require('path').jo
 
 const electron = require('electron')
 const win = electron.remote.getCurrentWindow()
-
 win.on('maximize', function () {
     let html = document.getElementsByTagName('html')[0]
     html.style.padding = '0px'

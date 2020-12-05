@@ -1,7 +1,7 @@
 <template>
     <div class="footer-class">
         <span><i class="iconfont icon-previous-copy icon-style-left" @click="goBack" v-show="this.$route.path != '/'"></i></span>
-        <span>by: 黄-2018</span>
+        <span>&copy;2020 </span>
         <i class="iconfont icon-shezhi2 icon-style" @click="setting"></i>
     </div>
 </template>

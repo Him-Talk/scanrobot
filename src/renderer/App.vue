@@ -14,7 +14,13 @@ export default {
       'transitionGroup'
     ])
   },
+  mounted () {
+    window.addEventListener('unload', this.saveState)
+  },
   methods: {
+    saveState () {
+      sessionStorage.setItem('state', JSON.stringify(this.$store.state))
+    },
     afterEnter: function () {
       this.$store.dispatch('changeTransition', 'none')
     }
