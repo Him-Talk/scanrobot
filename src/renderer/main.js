@@ -4,6 +4,7 @@ import axios from 'axios'
 import App from './App'
 import router from './router'
 import store from './store'
+import api from './lib/api'
 
 // 引入多窗口和element
 import Win from 'electron-vue-windows'
@@ -29,6 +30,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.universal = Vue.prototype.$universal = universal
+Vue.prototype.$api = api
 /* eslint-disable no-new */
 new Vue({
   components: { App },

@@ -29,10 +29,10 @@
                   <i class="el-icon-location"></i>
                   <span>账户管理</span>
                 </template>
-                <el-menu-item index="1-1" @click="openWins('/accounts/turnover')">账户流水</el-menu-item>
-                <el-menu-item index="1-2" @click="openWins('/accounts/finance')">财务流水</el-menu-item>
-                <el-menu-item index="2-3" @click="openWins('/accounts/deposit')">充提记录</el-menu-item>
-                <el-menu-item index="1-4" @click="openWins('/accounts/authors')">授权管理</el-menu-item>
+                <el-menu-item index="1-1" @click="openWins('/accounts/turnover', 1480, 800)">账户流水</el-menu-item>
+                <el-menu-item index="1-2" @click="openWins('/accounts/finance', 1480, 800)">财务流水</el-menu-item>
+                <el-menu-item index="2-3" @click="openWins('/accounts/deposit', 1280, 800)">充提记录</el-menu-item>
+                <!--<el-menu-item index="1-4" @click="openWins('/accounts/authors')">授权管理</el-menu-item>-->
                 <el-menu-item index="1-5" @click="openWins('/accounts/assets')">资产管理</el-menu-item>
               </el-submenu>
               <el-submenu index="2">
@@ -40,16 +40,16 @@
                   <i class="el-icon-setting"></i>
                   <span slot="title">财务信息</span>
                 </template>
-                <el-menu-item index="2-1" @click="openWins('/finance/transaciton')">交易记录</el-menu-item>
-                <el-menu-item index="2-2" @click="openWins('/finance/transfer')">划转记录</el-menu-item>
-                <el-menu-item index="2-3" @click="openWins('/finance/pending')">未成交订单</el-menu-item>
+                <el-menu-item index="2-1" @click="openWins('/finance/transaction', 1480, 800)">交易记录</el-menu-item>
+                <el-menu-item index="2-2" @click="openWins('/finance/transfer')">资产划转</el-menu-item>
+                <!--<el-menu-item index="2-3" @click="openWins('/finance/pending')">未成交订单</el-menu-item>-->
               </el-submenu>
               <el-submenu index="3">
                 <template slot="title">
                   <i class="el-icon-setting"></i>
                   <span slot="title">市场观察</span>
                 </template>
-                <el-menu-item index="3-1" @click="openWins('/market/quotes')">行情列表</el-menu-item>
+                <el-menu-item index="3-1" @click="openWins('/market/quotes', 1280, 683)">行情列表</el-menu-item>
                 <el-menu-item index="3-2" @click="openWins('/market/stats')">系统状态</el-menu-item>
                 <el-menu-item index="3-3" @click="openWins('/market/pending')">未成交订单</el-menu-item>
               </el-submenu>

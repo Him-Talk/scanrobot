@@ -1,6 +1,7 @@
 <template>
     <Frame>
     <renderHead slot="header"></renderHead>
+    <el-main></el-main>
     </Frame>
 </template>
 <script>
