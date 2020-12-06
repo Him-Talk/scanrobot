@@ -2,7 +2,7 @@
     <Frame>
     <renderHead slot="header"></renderHead>
     <el-main>
-        <el-form ref="from" :model="from" label-width="80px">
+        <el-form ref="from" :model="from" label-width="140px">
             <el-form-item label="收藏数量">
                 <el-col :span="15">
                     <el-input v-model="from.favorite" placeholder="防止加载过多导致卡死，此处限制收藏收藏数量"></el-input>
@@ -23,6 +23,31 @@
                     <el-input v-model="from.high" placeholder="设置最大允许订阅的市场交易对数量"></el-input>
                 </el-col>
             </el-form-item>
+            <el-form-item label="结算资产">
+                <el-col :span="15">
+                    <el-input v-model="from.settle" placeholder="设置自动交易结算币种"></el-input>
+                </el-col>
+            </el-form-item>
+            <el-form-item label="配资比例">
+                <el-col :span="15">
+                    <el-input v-model="from.alloc" placeholder="预备账户资产投资比例，%"></el-input>
+                </el-col>
+            </el-form-item>
+            <el-form-item label="营收比例">
+                <el-col :span="15">
+                    <el-input v-model="from.revenue" placeholder="设置自动挂单结算收益比"></el-input>
+                </el-col>
+            </el-form-item>
+            <el-form-item label="止盈止损">
+                <el-col :span="15">
+                    <el-input v-model="from.stop" placeholder="设置挂单盈亏比例"></el-input>
+                </el-col>
+            </el-form-item>
+            <el-form-item label="投资市场限制">
+                <el-col :span="15">
+                    <el-input v-model="from.imr" placeholder="限制最大交易市场数量"></el-input>
+                </el-col>
+            </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="onSubmit">保存设置</el-button>
             </el-form-item>
@@ -41,7 +66,12 @@
                     normal: '',
                     entry: 30,
                     high: 300,
-                    createTime: 0
+                    createTime: 0,
+                    settle: 'usdt',
+                    alloc: 0,
+                    revenue: 0,
+                    stop: 0,
+                    imr: 10
                 },
                 old: {},
                 hash: '',

@@ -111,7 +111,7 @@
                         keys: `${this.root}.accountid.config.api.temp`,
                         value: this.from
                     });
-                    electron.ipcRenderer.on(`${_this.root}.accountid.config.api.temp_put_callback`, function(event, args) {
+                    electron.ipcRenderer.on(`${this.root}.accountid.config.api.temp_put_callback`, function(event, args) {
                         if(_this.hash !== ''){
                             console.log(_this.hash)
                             _this.old.hash = _this.hash.split('.')[5]
@@ -120,7 +120,7 @@
                                 keys:`${_this.root}.accountid.config.api`,
                                 value: _this.old
                             });
-                            electron.ipcRenderer.on(`${_this.root}.accountid.config.api_put_callback`, function(event, args){
+                            electron.ipcRenderer.on(`${this.root}.accountid.config.api_put_callback`, function(event, args){
                                 _this.remove(_this.hash)
                                 _this.$alert('修改成功', '操作提醒', {
                                     confirmButtonText: '确定'

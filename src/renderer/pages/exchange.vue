@@ -51,7 +51,7 @@
                 </template>
                 <el-menu-item index="3-1" @click="openWins('/market/quotes', 1280, 683)">行情列表</el-menu-item>
                 <el-menu-item index="3-2" @click="openWins('/market/stats')">系统状态</el-menu-item>
-                <el-menu-item index="3-3" @click="openWins('/market/pending')">未成交订单</el-menu-item>
+                <!--<el-menu-item index="3-3" @click="openWins('/market/pending')">未成交订单</el-menu-item>-->
               </el-submenu>
               <el-submenu index="4">
                 <template slot="title">
@@ -59,7 +59,7 @@
                   <span slot="title">系统设置</span>
                 </template>
                 <el-menu-item index="4-1" @click="openWins('/config/api', 800, 600)">API设置</el-menu-item>
-                <el-menu-item index="4-2" @click="openWins('/config/market')">市场设置</el-menu-item>
+                <el-menu-item index="4-2" @click="openWins('/config/market', 800, 600)">市场设置</el-menu-item>
                 <el-menu-item index="4-3" @click="openWins('/config/haystack', 1400, 800)">大海捞针</el-menu-item>
               </el-submenu>
             </el-menu>
